@@ -98,10 +98,26 @@ a:hover {
 
 ul {
   list-style: none;
+ 
 }
+
 
 img {
   width: 100%;
+}
+
+/* Profile css */
+.profile-container{
+  margin-left: 200px;
+  border:1px;
+  border-color: #003699;
+  border-style: solid;
+}
+.Name{
+  display: flex;
+}
+.profilelinks ul li{
+  display: inline-block;
 }
 
 /* Utilities */
@@ -516,4 +532,6 @@ table th {
     text-align: center;
     justify-content: start;
   }
+
+ 
 }

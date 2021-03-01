@@ -8,6 +8,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Profile from './components/auth/Profile';
 import icon from './img/comCrew.png';
+import Notification from'./components/ProfileLinks/Notification';
 
 import './App.css';
 
@@ -29,6 +30,7 @@ const App = () => {
             <Route exact path='/Register' component={Register} />
             <Route exact path='/Login' component={Login} />
             <Route exact path='/Profile' component={Profile} />
+            <Route exact path='/Notification' component={Notification} />
         </Switch>
       </div>
     </Fragment>
