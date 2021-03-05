@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Assignments",
+        "tasks": 
+            [   { 
+                    "id": 1,
+                    "name": "Assignment 1",
+                    "dateDue":"2020-03-01",
+                    "assigned": "Brad",
+                    "urgency":"high",
+                    "status":true
+                },
+                { 
+                    "id": 2,
+                    "name": "Lab 7",
+                    "dateDue":"2020-03-03",
+                    "assigned": "Peter",
+                    "urgency":"medium",
+                    "status":true
+                },
+                { 
+                    "id": 3,
+                    "name": "Have life",
+                    "dateDue":"",
+                    "assigned": "",
+                    "urgency":"none",
+                    "status":false
+                }
+            ]
+    }
+  ]

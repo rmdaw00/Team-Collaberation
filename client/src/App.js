@@ -7,6 +7,8 @@ import About from './components/pages/About';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Profile from './components/auth/Profile';
+import TasksGroup from './components/pages/Tasks/TasksGroup';
+import TasksDate from './components/pages/Tasks/TasksDate';
 import icon from './img/comCrew.png';
 import Notification from'./components/ProfileLinks/Notification';
 
@@ -31,6 +33,10 @@ const App = () => {
             <Route exact path='/Login' component={Login} />
             <Route exact path='/Profile' component={Profile} />
             <Route exact path='/Notification' component={Notification} />
+
+            <Route exact path='/Tasks' component={TasksGroup} />
+            <Route exact path='/Tasks/Date' component={TasksDate} />
+            <Route exact path='/Tasks/Group' component={TasksGroup} />
         </Switch>
       </div>
     </Fragment>
