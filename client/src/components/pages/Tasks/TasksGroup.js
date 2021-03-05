@@ -29,7 +29,7 @@ const TasksGroup =  (props) => {
     }    
 
     const addTask = (id, name) => {
-        // console.log(groups.find((t) => t.id === id))
+        console.log(groups.find((t) => t.id === id))
 
         // setTasks(tasks => [...tasks,{
         //     id: 1,
