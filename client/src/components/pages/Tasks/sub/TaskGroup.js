@@ -7,8 +7,9 @@ const TaskGroup = (props) => {
     const [catEditState, setcatEditState] = useState(false);
     const [tasks, setTasks] = useState(props.tasks)
 
-    const handleDelete = (e) => {
-      props.deleteGroup(props.key)
+    const handleDelete = () => {
+      console.log(props.id)
+      props.deleteGroup(props.id)
     }
 
     const handleCategoryRename = (e) => {
@@ -19,7 +20,7 @@ const TaskGroup = (props) => {
         props.addTask(props.key, name)
 
         setTasks(tasks => [...tasks,{
-            id: 1,
+            id: tasks.length+1,
             name: name,
             dateDue:"",
             assigned: "",

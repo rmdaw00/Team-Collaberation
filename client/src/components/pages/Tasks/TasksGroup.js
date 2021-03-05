@@ -22,7 +22,7 @@ const TasksGroup =  (props) => {
 
     const addGroup = (name) => {
         setGroups(groups => [...groups,{
-            id: 1,
+            id: groups.length+1,
             name: name,
             tasks: []
         }]) 
@@ -44,6 +44,7 @@ const TasksGroup =  (props) => {
     }
 
     const deleteGroup = (id) => {
+        console.log(id)
         setGroups(groups.filter((t) => t.id !== id))
     }
 
@@ -56,7 +57,7 @@ const TasksGroup =  (props) => {
             </div>
            
             { groups.map((s) => (
-               <TaskGroup name={s.name} tasks={s.tasks} key={s.id} addTask={addTask} deleteGroup={deleteGroup} />
+               <TaskGroup name={s.name} tasks={s.tasks} id={s.id} key={s.id} addTask={addTask} deleteGroup={deleteGroup} />
             ))}
             
             <AddGroup addGroup={addGroup} />
