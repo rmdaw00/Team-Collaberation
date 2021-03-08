@@ -484,6 +484,390 @@ table th {
   opacity: 0;
   transition: opacity 1000ms ease-in;
 }
+/* TasksGroup */
+div.tasks div.TG_form {
+  display:flex;
+  white-space: nowrap;
+  align-items: center;
+}
+/* REGULAR TEXT */
+
+
+/* FONT INVERTED */
+div.tasks div.TG_form button, div.tasks .TN_li_Active  {
+  background-color:var(--primary-color);
+  color: var(--light-color);
+}
+
+/* FONT HEADERS */
+div.tasks .PageHeaderText {
+color:var(--primary-color);
+font-weight: bold;
+}
+
+div.tasks .hoverable:hover {
+background-color: #eee;
+}
+div.tasks .appearable {
+  display: none;
+}
+
+div.tasks .hoverable:hover .appearable {
+display:block;
+}
+
+div.tasks div.TG_form button {
+padding: 0.4em 2em;
+}
+
+div.tasks .TN_li_common {
+border: 1px var(--primary-color) solid;
+padding: 1em 2em;
+margin:0;
+}
+
+div.tasks .tasksHeader{
+display: flex;
+justify-content: space-between;
+align-content: center;
+}
+
+
+div.tasks .TNav {
+float: right;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-end;
+}
+
+
+div.tasks .category {
+padding:0em 1em;
+display: flex;
+flex-direction: column;
+
+border-bottom: solid 2px #eeeeee;
+letter-spacing: 2px;
+border-bottom: 10px  var(--primary-color) solid;
+border-right: 7px  var(--primary-color) solid;
+border-left: 1px  var(--primary-color) solid;
+border-top: 1px  var(--primary-color) solid;
+border-bottom-left-radius: .5em;;
+border-top-right-radius: .5em;;
+padding-bottom: 1em;
+margin-bottom: .5em;
+}
+
+
+div.tasks .category .formHeader, div.tasks #searchForm {
+display: flex;
+font-size: 1.2em;
+justify-content: space-between;
+align-content: center;
+}
+
+
+div.tasks .category .formHeader .categoryEdit.expanded {
+display:inline-block;
+padding: 1em;
+margin: 1em;
+}
+
+div.tasks .category .formHeader .category-name.expanded, div.tasks .category .formHeader .categoryEdit
+,div.tasks .category .formHeader .fa-pen.expanded, div.tasks .category .formHeader .fa-close.expanded
+{
+display:none;
+}
+
+div.tasks .category .formHeader .fa-close, div.tasks .category .formHeader .fa-pen {
+color:var(--danger-color);
+margin: auto .2em;
+font-size: 1em;
+background-color: var(--light-color);
+padding: .5em;
+
+}
+
+div.tasks .category .formHeader .fa-pen {
+color:var(--success-color);
+margin-right: 1em;
+}
+
+div.tasks .category .formHeader .fa-close {
+color:var(--danger-color);
+}
+
+div.tasks #searchForm {
+justify-content: space-around;
+}
+
+div.tasks #searchForm>* {
+margin: .5em;
+line-height: 1.5em;
+}
+
+div.tasks #searchForm input {
+width: 100%;
+}
+
+div.tasks .category button#btnAdd {
+width: min-content;
+align-self: flex-end;
+margin: 1em 0;
+padding: 1em;
+border: 1 black solid;
+background-color: #83d97c;
+
+}
+
+div.tasks .category-name:hover .remove-task {
+visibility: visible;
+}
+
+.category-name,
+.counter-items {
+font-weight: bold;
+font-size: larger;
+color: #2e2e2e;
+}
+
+div.tasks .category-name {
+flex-grow: 1;
+line-height: 3.5em;
+padding-left: 10px;
+}
+
+.task {
+padding: .5em;
+margin:2px;
+margin-left:2em;
+}
+
+div.tasks .task input {
+margin: .5em;
+font-size: .8rem;
+}
+
+div.tasks .task input[type="checkbox"] {
+margin: .5em;
+margin-right: 1.5em;
+transform: scale(1.5);
+
+}
+
+div.tasks .task input.editName {
+padding: .5em;
+transform: scale(1.1);
+border: 1px solid var(--dark-color);
+}
+
+.task .fa-chevron-down {
+float:right;
+}
+.task .fa-chevron-down.expanded { 
+transform:rotate(180deg);
+}
+
+div.tasks .editName, div.tasks .taskDetails,  div.tasks .taskLabel.expanded{
+display:none;
+}
+
+div.tasks .taskDetails.expanded, div.tasks .taskDetails .col {
+display:flex; 
+margin:0 1em;
+width:fit-content;
+white-space: nowrap;
+justify-content: space-between;
+}
+div.tasks .taskDetails.expanded {
+flex-wrap: wrap;
+margin: 0 0 0 5em;
+
+}
+
+
+
+div.tasks .taskDetails input, div.tasks .taskDetails select {
+padding: .5em;
+margin:0;
+font-size: 1em;
+width:fit-content;
+}
+
+div.tasks .editName.expanded {
+display:inline-block;
+}
+
+
+
+div.tasks .task label {
+color: var(--dark-color);
+text-decoration: none;
+}
+
+div.tasks .task label.checked {
+color: grey;
+text-decoration: line-through;
+}
+
+
+/*  Assign Task */
+/* *{
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+} */
+
+.main_note{
+   width: 500px;
+   padding: 15px 10px 5px 10px;
+   margin: 20px auto;
+
+}
+
+form{
+  min-height: 50px;
+  color:#94a4a8;
+  padding: 15px 10px 5px 10px;
+  box-shadow: 3px 5px 15px -5px rgba(0,0,0);
+  border-radius:10px ;
+  position: relative;
+
+}
+
+input{
+
+  width:100%;
+  line-height: 30px;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+textarea{
+  width:100%;
+  line-height: 30px;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 10px 0;
+  font-size: 1rem;
+
+}
+
+.project {
+
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc; 
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+}
+
+.note h1{
+
+   font-size: 1.1 em;
+   margin-bottom: 6px;
+
+}
+
+.note p{
+ 
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+}
+
+.plus_sign{
+ 
+  background: transparent;
+  font-size: 45px;
+  color: #f4b400;
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 222;
+  background: transparent;
+  border-radius: 50px;
+}
+
+
+.deleteIcon{
+
+  width: 0.7em;
+  height: 0.7em;
+}
+
+.project .btn:hover{
+  background-color: #f5ba13;
+}
+
+.project .btn:hover {
+
+  color:#fff;
+}
+
+Button:hover{
+  background:#f4b400;
+}
+
+.plus_sign:hover {
+
+  color:#f5ba13;
+  background: transparent;
+}
+
+
+
+
+.project .btn{
+   position: relative;
+   float: right;
+   margin-right: 10px;
+   color:#f4b400;
+   border: none;
+   width: 50px;
+   height: 50px;
+   background: transparent;
+   cursor: pointer;
+   outline:none;
+   border-radius: 50px;
+
+}
+
+.plus{
+ 
+  width: 30px;
+  height: 50px;
+  position: absolute;
+  bottom: -28px;
+  left: 400px;
+  cursor: pointer;
+  background-color: #fff;
+
+
+}
+
+Table{
+   
+  width:30%;
+  margin-top: 100px;
+  margin-left: 0px;
+  
+}
+
+.cal{
+  margin-left: 500px;
+}
 
 /* Mobile Styles */
 @media (max-width: 700px) {
@@ -532,6 +916,77 @@ table th {
     text-align: center;
     justify-content: start;
   }
+  /* Notes */
+  .App-header {
+    background-color:blue;
+    font-size:20px;
+    height: 50px;
+  
+  }
+  .an{
+    color:whitesmoke;
+    margin-right: 20px;
+    margin-left: 900px;
+  }
+  .nn{
+    color:whitesmoke;
+    
+  }
+  .newnote-page {
+    margin-left: 100px;
+    margin-right: 400px;
+    border: solid;
+    border-color: teal;
+  
+  }
+  .field{
+    margin-left: 20px;
+    padding:10px;
+  }
+  .container {
+    margin-left: 300px;
+  }
+  .heading{
+    margin-left: 200px;
+  }
+  
+  .App-title {
+    font-size: 1.5em;
+  }
+  .App-intro {
+    font-size: large;
+  }
+  .m-t-20 {
+    margin-top: 20px;
+  }
+  .card {
+    border: solid;
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.1);
+  }
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .newnote-page {
+    height: calc(100vh - 52px);
+    width: 60%;
+  }
+  .field:not(:last-child) {
+    margin-bottom: 2.75rem;
+  }
+  .card button {
+    border: none;
+    color: #3273dc;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .card button:hover {
+    color: #363636;
+  }
+  
+  
+  
 
  
 }

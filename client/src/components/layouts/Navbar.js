@@ -34,6 +34,9 @@ const Navbar = ({title, icon}) => {
                 <li>
                     <Link to='/Profile'>Profile</Link>
                 </li>
+                <li>
+                    <Link to='/Makeproject'>CreateProject</Link>
+                </li>
             </ul>
       
            

@@ -13,7 +13,7 @@ export const SidebarData = [
     },
     {
         title:'My Tasks',
-        path:'/tasks',
+        path:'/Tasks',
         icon:<AiIcons.AiOutlineCheckCircle/>,
         cName:'nav-textSide'
     },
@@ -38,6 +38,12 @@ export const SidebarData = [
     {
         title:'Goals',
         path:'/goals',
+        icon:<AiIcons.AiFillBulb/>,
+        cName:'nav-textSide'
+    },
+    {
+        title:'MyNotes',
+        path:'/Notes',
         icon:<AiIcons.AiFillBulb/>,
         cName:'nav-textSide'
     },
