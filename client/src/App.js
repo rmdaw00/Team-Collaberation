@@ -6,10 +6,7 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-import Alerts from './components//layout/Alerts';
-import PrivateRoute from './components/routing/PrivateRoute';
-import ReactCalendar from './components/datePicker/Calendar';
-import Profile from './components/Profile/Profile';
+
 import Notification from'./components/ProfileLinks/Notification';
 import Notes from'./components/Notes/NewNote';
 import MakeProject from './components/MakeProject/MakeProject';
@@ -49,6 +46,7 @@ const App = () => {
 
 
             <Route exact path='/Notification' component={Notification} />
+
             <Route exact path='/Notes' component={Notes} />
             <Route exact path='/Tasks' component={TasksGroup} />
             <Route exact path='/Tasks/Date' component={TasksDate} />
@@ -70,6 +68,7 @@ const App = () => {
       </ContactState>
       </EventState>
     </AuthState>
+
   );
 };
 
