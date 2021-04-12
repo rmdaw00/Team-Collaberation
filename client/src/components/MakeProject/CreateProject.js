@@ -12,7 +12,7 @@ function CreateProject () {
         <form>
             <input type="text" placeholder="Title" />
             <textarea rows=" "  column=" " placeholder="Create new project.."></textarea>
-            { <Button>
+            { <Button >
                 {/* <AddIcon className="plus_sign" /> */}
                 <AiIcons.AiOutlinePlus/>
             </Button> }

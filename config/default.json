@@ -1,5 +1,4 @@
 {
-    "mongoDBConnection" : "mongodb+srv://computercrew:rVKgnTZ2CvHNxg2@cluster0.o0y73.mongodb.net/TeamCollaboration?retryWrites=true&w=majority",
-     
-    "jwtsecret" : "secret"
- }
+    "mongoURI":  "mongodb+srv://computercrew:rVKgnTZ2CvHNxg2@cluster0.o0y73.mongodb.net/TeamCollaboration?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
+}

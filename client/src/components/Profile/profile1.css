@@ -1,0 +1,26 @@
+/* Profile css */
+.profile-container{
+    margin-left: 200px;
+    border:1px;
+    border-color: #003699;
+    border-style: solid;
+  }
+  .Name{
+    display: flex;
+  }
+  .profilelinks ul li{
+    display: inline-block;
+    padding: 40px;
+  }
+  ul {
+    list-style: none;
+   
+  }
+  #fname{
+    width:500px;
+    margin-left: 50px;
+    
+  }
+  #label{
+      margin-left: 10px;
+  }
