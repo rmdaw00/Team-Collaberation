@@ -36,8 +36,7 @@ const TaskDetails = (props) => {
     )
 }
 
-export default TaskDetails
-<<<<<<< HEAD
 
-=======
->>>>>>> 672c67ecdfbbbeb5725880283310eaf60ba2ab4b
+
+
+export default TaskDetails
