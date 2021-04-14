@@ -24,12 +24,17 @@ Features divided between groups members as:
 * Project Setting Page
 
 (Rashed)
-* team todo list with date due with comments
-* report 
-* theme & navigation 
+* team todo list with date due with comments (server side complete)
+* Group
+* Notifications
+
 
 (Manpreet Kaur)
 * Creating Projects and roles
 * Notifications page
 * announcement page
 
+(Optional)
+* theme & navigation 
+* Chat
+* Report
