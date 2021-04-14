@@ -25,8 +25,8 @@ Features divided between groups members as:
 
 (Rashed)
 * team todo list with date due with comments (server side complete)
-* Group
-* Notifications
+* Chat / message notifications
+* Report
 
 
 (Manpreet Kaur)
@@ -36,5 +36,3 @@ Features divided between groups members as:
 
 (Optional)
 * theme & navigation 
-* Chat
-* Report
