@@ -26,7 +26,6 @@ app.use('/api/events', require('./routes/events'));
 app.use('/api/profile', require('./routes/profileRoutes'));
 app.use('/api/invite', require('./routes/invite'));
 
-
 // app.use('/allcontacts', require('./routes/contacts'));
 
 // Serve static assets in production

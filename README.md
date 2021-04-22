@@ -8,7 +8,7 @@
 
 Features divided between groups members as:
 
-(Nour Rassam)
+(Noar Rassam)
 * Starting with login and registration ( authentication and authorization is Completed)
 * Contact us page with edit and add feature (Completed with proper validation, server and client side both)
 * team events calendar with different views (completed with proper validation, server and client side both)
