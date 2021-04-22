@@ -1,7 +1,7 @@
 import React, { useState,useEffect,Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
- import NavbarSide from'./components/layout/NavbarSide';
+import NavbarSide from'./components/layout/NavbarSide';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Register from './components/auth/Register';
@@ -79,8 +79,8 @@ function App()  {
                   <Route exact path='/about' component={About} />
                   <Route exact path='/register' component={Register} />
                   <Route exact path='/login' component={Login} />
-                  <Route exact path='/calendar' component={ReactCalendar} />
-                  <Route exact path='/Profile' component={Profile} />
+                  <PrivateRoute exact path='/calendar' component={ReactCalendar} />
+                  <PrivateRoute exact path='/Profile' component={Profile} />
 
 
             <Route exact path='/Notification' component={Notification} />
@@ -88,7 +88,7 @@ function App()  {
             <Route exact path='/Tasks' component={TasksGroup} />
             <Route exact path='/Tasks/Date' component={TasksDate} />
             <Route exact path='/Tasks/Group' component={TasksGroup} />
-            <Route exact path='/Makeproject' component={MakeProject} />
+            <PrivateRoute exact path='/Makeproject' component={MakeProject} />
             
             <Route exact path='/AssignTask' component={AssignTask} />
             <Route exact path='/Cal' component={Cal} />
