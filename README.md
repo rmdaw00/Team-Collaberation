@@ -16,7 +16,7 @@ Features divided between groups members as:
 (Sahibjeet Kaur)
 * member Profile  (Server side completed)
 * Team Building Page and invitations
-* File sharing
+* Theme
 
 (Karanjeet Kaur)
 * Team Notes ( server side completed)

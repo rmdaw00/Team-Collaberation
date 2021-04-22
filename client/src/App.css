@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
 
 /* Global Styles */
 :root {
@@ -14,6 +15,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+.App{
+  height: 100vh;
+  padding-top: 10px;
 }
 
 body {

@@ -1,7 +1,7 @@
 import React from 'react'
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-
+import * as FcIcons from "react-icons/fc";
 import * as FiIcons from "react-icons/fi";
 
 export const SidebarData = [
@@ -47,4 +47,19 @@ export const SidebarData = [
         icon:<AiIcons.AiFillBulb/>,
         cName:'nav-textSide'
     },
+    <br></br>,<br></br>,
+
+    {
+        title:'Invite Teammates',
+        path:'/Invite',
+        icon:<FcIcons.FcInvite/>,
+        cName:'nav-textSide'
+    },
+    {
+        title:'Theme',
+        path:'/Theme',
+        icon:<FcIcons.FcInvite/>,
+        cName:'nav-textSide'
+    },
+  
 ]

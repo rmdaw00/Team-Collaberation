@@ -1,0 +1,16 @@
+#dropdown{
+    width: 100px;
+    margin-left: 100px;
+    font-size: 15px;
+    color: grey;
+    border-radius: 6px;
+    box-shadow: 10px;
+    
+}
+
+#al{
+    display: flex;
+}
+#sz{
+    width: 250px;
+}

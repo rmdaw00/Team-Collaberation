@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "d943f088-ce10-49e4-945a-dbfef7199742",
+		"name": "Profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2NGQ2NmVjNjAxYjE1OTkwMzM1MjBhIiwibmFtZSI6InNhaGliIn0sImlhdCI6MTYxNzIyMTM2NiwiZXhwIjoxNjE3MjI0OTY2fQ.SdJ8pfFT0T0uUvpi1t7-BGcgZTjsDqJTJSEHmhgkyxs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"profile1\",\r\n    \"lastname\":\"lastname\",\r\n    \"email\":\"sd@gmail.com\",\r\n    \"role\":\"subject\",\r\n    \"team\":\"team1\",\r\n    \"aboutme\":\"subjectbjjkh\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list Profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2NGQ2NmVjNjAxYjE1OTkwMzM1MjBhIiwibmFtZSI6InNhaGliIn0sImlhdCI6MTYxNzIyMTM2NiwiZXhwIjoxNjE3MjI0OTY2fQ.SdJ8pfFT0T0uUvpi1t7-BGcgZTjsDqJTJSEHmhgkyxs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"605fb7e604a59671b85eac3c\",\r\n    \"firstname\":\"sahib\",\r\n    \"lastname\":\"lastname\",\r\n    \"email\":\"sd@gmail.com\",\r\n    \"role\":\"subject\",\r\n    \"team\":\"team1\",\r\n    \"aboutme\":\"subjectbjjkh\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2NGQ2NmVjNjAxYjE1OTkwMzM1MjBhIiwibmFtZSI6InNhaGliIn0sImlhdCI6MTYxNzIyMTM2NiwiZXhwIjoxNjE3MjI0OTY2fQ.SdJ8pfFT0T0uUvpi1t7-BGcgZTjsDqJTJSEHmhgkyxs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"6064d7a09c7fa72b0ca9c483\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
