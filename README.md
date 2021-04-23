@@ -12,6 +12,7 @@ Features divided between groups members as:
 * Starting with login and registration ( authentication and authorization is Completed)
 * Contact us page with edit and add feature (Completed with proper validation, server and client side both)
 * team events calendar with different views (completed with proper validation, server and client side both)
+# Link: https://floating-sea-32917.herokuapp.com/
 
 (Sahibjeet Kaur)
 * member Profile  (Server side  and client side completed with validation)
