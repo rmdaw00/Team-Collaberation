@@ -3,14 +3,17 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
 import ContactContext from '../../context/contact/contactContext';
+import EventContext from '../../context/newEvent/eventContext';
 
 
 const Navbar = ({ title, icon }) => {
   const authContext = useContext(AuthContext);
   const contactContext = useContext(ContactContext);
+  const eventContext = useContext(EventContext);
 
   const { isAuthenticated, logout, user, loadUser } = authContext;
   const { clearContacts } = contactContext;
+  const { clearEvents } = eventContext;
 
   useEffect(() => {
     loadUser();
@@ -20,6 +23,7 @@ const Navbar = ({ title, icon }) => {
   const onLogout = () => {
     logout();
     clearContacts();
+    //clearEvents();
   };
 
   const authLinks = ( //registered

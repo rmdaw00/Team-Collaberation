@@ -8,6 +8,7 @@ const app = express();
 // Connect Database
 connectDB();
 
+
 // Init Middleware
 app.use(express.json({ extended: false }));
 app.use(cors());
@@ -19,8 +20,13 @@ app.use('/api/todoTasks', require('./routes/todoTaskRoutes'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/contacts', require('./routes/contacts'));
 app.use('/api/events', require('./routes/events'));
+
 app.use('/api/notes', require('./routes/noteRoute'));
 app.use('/api/setting', require('./routes/settingRoute'));
+
+app.use('/api/profile', require('./routes/profileRoutes'));
+app.use('/api/invite', require('./routes/invite'));
+
 
 // app.use('/allcontacts', require('./routes/contacts'));
 

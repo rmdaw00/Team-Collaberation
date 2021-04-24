@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height:100%;
+
+}
+body{
+    background-color: #fff;
+    color:#222;
+    padding:0;
+    height:100vh;
+}
+.theme-options{
+        max-width: 800px;
+        margin:0 auto;
+        text-align: right;
+        padding: 20px 0;
+        div{
+            cursor: pointer;
+            width:20px;
+            height:20px;
+            border-radius: 4px;
+            margin:-1px 51px;
+            border: 1px solid #fff;
+            display: inline-block;
+            opacity: 1.5;
+
+            &.active{
+                opacity: 1;
+
+            }
+        }
+        #theme-white{
+            background-color: #eee;
+        }
+        #theme-blue{
+            background-color: #1e41c1;
+        }
+        #theme-orange{
+            background-color: #b64b1e;
+        }
+        #theme-purple{
+            background-color: #7852ae;
+        }
+        #theme-green{
+            background-color: #5faf3b;
+        }
+        #theme-black{
+            background-color: #5c5c5c;
+        }
+}
+
+// .container{
+//     margin: 0 auto;
+//     background-color: #eee;
+//     color: #222;
+//     border-radius: 8px;
+//     padding: 30px 30px 40px 40px;
+//     max-width: 800px;
+// }
+.App.theme-green{
+    background-color: #c3e3c1;
+}
+.App.theme-blue{
+    background-color: #6b83d8;
+}
+.App.theme-black{
+    background-color: #5c5c5c;
+}
+.App.theme-orange{
+    background-color: #f4b9b7;
+}
+.App.theme-purple{
+    background-color: #d0b7f4;
+}

@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "e0c5f2d2-ecae-46fd-bbf4-6bfd71f71933",
+		"name": "Invite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "invite teams",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA3MGQ1Yjc5NjM1Mjk1MjQ4ZjI1NDU4In0sImlhdCI6MTYxODYyOTYzNywiZXhwIjoxNjE4OTg5NjM3fQ.XV4aQEQKerDtuGOgVHzxYlH58ko-YeiexNKOvvllw14",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"email\":\"sd@gmail.com\",\r\n    \"project\":\"project\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/invite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"invite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/invite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"invite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Member",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA3MGQ1Yjc5NjM1Mjk1MjQ4ZjI1NDU4In0sImlhdCI6MTYxODczMzk0MCwiZXhwIjoxNjE5MDkzOTQwfQ.fEfQMZPw67mSwd6bX46ncBGOLhR-DqZV4XV11mqs8No",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"_id\": \"607a7f55f3a30857c0e9e44a\"\r\n }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/invite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"invite"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
