@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "7ad08107-bf0c-45d0-ab59-637912d5cd9e",
+		"name": "Notes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "noteList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "createnote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA3MGQ1Yjc5NjM1Mjk1MjQ4ZjI1NDU4In0sImlhdCI6MTYxODY0MTE4MCwiZXhwIjoxNjE5MDAxMTgwfQ.uR65biX1TIu3Dl_gF3oMXctC86-Y6yd1Lb-yzS7PqCg\"\n}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"note3\",\r\n    \"description\":\"This is the note 3\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findbyid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteNote",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateNote",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MmVjOWI1OTIwMmMxNTc4NmRjODE2IiwibmFtZSI6ImthcmFuamVldCJ9LCJpYXQiOjE2MTcwOTU4MzUsImV4cCI6MTYxNzA5OTQzNX0.sQeGGWplMa4vHfRhhMPZ5s5W0p04v_kWDDZOBwoWOew",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"6062ed1f59202c15786dc817\",\r\n    \"title\":\"Note1\",\r\n    \"description\":\"This is the note number 1\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
