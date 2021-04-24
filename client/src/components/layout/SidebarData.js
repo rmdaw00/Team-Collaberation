@@ -47,4 +47,10 @@ export const SidebarData = [
         icon:<AiIcons.AiFillBulb/>,
         cName:'nav-textSide'
     },
+    {
+        title:'Project Settings',
+        path:'/Setting',
+        icon:<AiIcons.AiFillBulb/>,
+        cName:'nav-textSide'
+    },
 ]

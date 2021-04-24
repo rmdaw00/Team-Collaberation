@@ -22,6 +22,7 @@
     "@syncfusion/ej2-react-schedule": "^18.4.46",
     "ag-grid-community": "^25.1.0",
     "ag-grid-react": "^25.1.0",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.6.0",
     "config": "^3.3.6",
