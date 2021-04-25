@@ -48,7 +48,7 @@
 					},
 					{
 						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3IiwibmFtZSI6Im1hcmsifSwiaWF0IjoxNjE2OTEwNDQwLCJleHAiOjE2MTY5MTQwNDB9.b1haUzq5QpXbNxzxOJGZN0jzOkACJqhDRZilMnbNGZg",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgxODcxMSwiZXhwIjoxNjE5MTc4NzExfQ.OJjeu8tlgzR3Li9bErv6WpuEJvGmKuc2M3J4MsTsBGU",
 						"type": "text"
 					}
 				],
@@ -252,13 +252,13 @@
 					},
 					{
 						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3IiwibmFtZSI6Im1hcmsifSwiaWF0IjoxNjE2OTI1OTg4LCJleHAiOjE2MTY5Mjk1ODh9.9T9LsoLjQz9XEZsN8DMSeqaYC15hpGuArzj4PS3DVdQ",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgxODcxMSwiZXhwIjoxNjE5MTc4NzExfQ.OJjeu8tlgzR3Li9bErv6WpuEJvGmKuc2M3J4MsTsBGU",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"todoGroupID\": \"606018fbd8a91bfdf7e11578\",\n    \"todoTaskID\" : \"6060565188872c7c8b313925\",\n    \"name\":\"Renamed new task\",\n    \"status\":true,\n    \"assignedUser\":\"6060177c76e948f4ced07b87\",\n    \"urgency\":\"Low\",\n    \"dueDate\":\"2020-01-02\"\n}"
+					"raw": "{\n    \"todoGroupID\": \"606018fbd8a91bfdf7e11578\",\n    \"todoTaskID\" : \"607d4c11ca3e5e352a5ed82e\",\n    \"name\":\"Renamed new task\",\n    \"status\":false,\n    \"assignedUser\":\"6060177c76e948f4ced07b87\",\n    \"urgency\":\"Low\",\n    \"dueDate\":\"2020-02-02\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5000/api/todoTasks",
@@ -317,7 +317,7 @@
 					},
 					{
 						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3IiwibmFtZSI6Im1hcmsifSwiaWF0IjoxNjE2OTM1NTA4LCJleHAiOjE2MTY5MzkxMDh9.Lujufj6eoA8glFNVtrI4Eeb3e2qiPEsKYwN5uC66NOQ",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgxODcxMSwiZXhwIjoxNjE5MTc4NzExfQ.OJjeu8tlgzR3Li9bErv6WpuEJvGmKuc2M3J4MsTsBGU",
 						"type": "text"
 					}
 				],

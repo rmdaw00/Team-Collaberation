@@ -15,7 +15,7 @@ router.get('/', auth, async (req, res) => {
         const allAuthTasks = await TodoGroup.find();
         res.send(allAuthTasks.filter(s => (s.user == req.user.id))    //same user
                              .map(s => s.tasks.filter((s) => (s.dueDate))   //has due dates
-                                              .shift()        //flattens into 1 array
+                                              .shift()       //flattens into 1 array
                              ));
         
     } catch (error) {
@@ -131,9 +131,7 @@ router.put('/', auth, [
   check('todoGroupID', 'Task Group is required').not().isEmpty(),
   check('name', 'Task name is required').not().isEmpty(),
   check('status', 'Task status is required').isBoolean(),
-  check('assignedUser', 'Assigned User ID is required').exists(),
-  check('urgency', 'Task Urgency is required').not().isEmpty(),
-  check('dueDate', 'Task Due Date is required').exists(),
+  check('urgency', 'Task Urgency is required').not().isEmpty()
   ],
   async (req, res) => {
   try {
@@ -159,14 +157,15 @@ router.put('/', auth, [
     const name= req.body.name;
     const status= req.body.status;
     const urgency= req.body.urgency;
-    const dueDate= (req.body.dueDate===''?undefined:new Date(req.body.dueDate));
+    const dueDate= (isNaN(new Date(req.body.dueDate))?undefined:new Date(req.body.dueDate));
     const assignedUser= (req.body.assignedUser===''?undefined:req.body.assignedUser);
     console.log(dueDate)
     console.log(assignedUser)
     group.tasks = group.tasks.map((s) => {
          if (req.body.todoTaskID === s.id) 
             {
-              return { name,
+              return {  _id:s.id,
+                        name,
                         status,
                         assignedUser,
                         dueDate,

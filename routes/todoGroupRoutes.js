@@ -62,14 +62,14 @@ router.post('/', auth, [
 })
 
 
-router.delete('/', auth, check('todoGroupID', 'Task Group ID is required').not().isEmpty(), async (req, res) => {
+router.delete('/:todoGroupID', auth, check('todoGroupID', 'Task Group ID is required').not().isEmpty(), async (req, res) => {
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         return res.status(422).json({ errors: errors.array() });
       }
   
-      const group = await TodoGroup.findById(req.body.todoGroupID);
+      const group = await TodoGroup.findById(req.params.todoGroupID);
       if (!group) {
         return res.status(404).json({ msg: 'group not found' });
       }
@@ -81,8 +81,8 @@ router.delete('/', auth, check('todoGroupID', 'Task Group ID is required').not()
       }
   
   
-      const result = await TodoGroup.findByIdAndDelete(req.body.todoGroupID);
-      res.send(result.name + " deleted");
+      const result = await TodoGroup.findByIdAndDelete(req.params.todoGroupID);
+      res.send(" deleted");
     } catch (err) {
         console.log(err)
       res.status(500).send('Server error');
@@ -113,7 +113,6 @@ router.delete('/', auth, check('todoGroupID', 'Task Group ID is required').not()
           return res.status(403).json({ msg: 'not authorized' });
         }
       }
-
 
     group.name= req.body.name;
    

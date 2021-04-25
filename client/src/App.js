@@ -19,8 +19,9 @@ import MakeProject from './components/MakeProject/MakeProject';
 import AssignTask from './components/MakeProject/AssignTask';
 import Cal from './components/MakeProject/Cal';
 import Schedule from './components/MakeProject/Schedule';
-import TasksGroup from './components/pages/Tasks/TasksDate';
-import TasksDate from './components/pages/Tasks/TasksGroup';
+import TasksGroup from './components/pages/Tasks/TasksGroup';
+import TasksDate from './components/pages/Tasks/TasksDate';
+import Report from './components/pages/Report/Report';
 
 import AllNotes from './components/Notes/AllNotes';
 import Settings from './components/ProjectSettings/Setting';
@@ -100,6 +101,7 @@ function App()  {
             <Route exact path='/Tasks' component={TasksGroup} />
             <Route exact path='/Tasks/Date' component={TasksDate} />
             <Route exact path='/Tasks/Group' component={TasksGroup} />
+            <Route exact path='/Report' component={Report} />
             <PrivateRoute exact path='/Makeproject' component={MakeProject} />
             
 

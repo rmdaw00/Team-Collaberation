@@ -12,7 +12,7 @@ const TasksNav = (props) => {
     
   return (
     <nav className={"TNav"}>
-         <NavLink className={groupStyle} to='/Tasks/Group'>by Group</NavLink>
+          <NavLink className={groupStyle} to='/Tasks/Group'>by Group</NavLink>
           <NavLink className={dateStyle} to='/Tasks/Date'>by Date</NavLink>
     </nav>
   );

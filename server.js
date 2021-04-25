@@ -17,6 +17,9 @@ app.use(cors());
 app.use('/api/users', require('./routes/users'));
 app.use('/api/todoGroups', require('./routes/todoGroupRoutes'));
 app.use('/api/todoTasks', require('./routes/todoTaskRoutes'));
+app.use('/api/report', require('./routes/reportRoute'))
+app.use('/api/messages', require('./routes/messageRoute'));
+
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/contacts', require('./routes/contacts'));
 app.use('/api/events', require('./routes/events'));
