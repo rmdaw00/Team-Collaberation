@@ -481,6 +481,17 @@ div.tasks .category {
   margin-bottom: .5em;
 }
 
+.reportTables  {
+  width:100%;
+  margin-top: 1em;;
+  margin-top: 3em;;
+}
+
+.reportTables table {
+  margin-top: auto;
+  width:100%;
+}
+
 
 div.tasks .category .formHeader, div.tasks #searchForm {
   display: flex;
@@ -497,12 +508,12 @@ div.tasks .category .formHeader .categoryEdit.expanded {
 }
 
 div.tasks .category .formHeader .category-name.expanded, div.tasks .category .formHeader .categoryEdit
-,div.tasks .category .formHeader .fa-pen.expanded, div.tasks .category .formHeader .fa-close.expanded
+,div.tasks .category .formHeader .fa-pen.expanded, div.tasks .category .formHeader .fa-trash.expanded
 {
   display:none;
 }
 
-div.tasks .category .formHeader .fa-close, div.tasks .category .formHeader .fa-pen {
+div.tasks .category .formHeader .fa-trash, div.tasks .category .formHeader .fa-pen {
   color:var(--danger-color);
   margin: auto .2em;
   font-size: 1em;
@@ -516,7 +527,7 @@ div.tasks .category .formHeader .fa-close, div.tasks .category .formHeader .fa-p
   margin-right: 1em;
 }
 
-div.tasks .category .formHeader .fa-close {
+div.tasks .category .formHeader .fa-trash {
   color:var(--danger-color);
 }
 
@@ -533,6 +544,7 @@ div.tasks #searchForm input {
   width: 100%;
 }
 
+
 div.tasks .category button#btnAdd {
   width: min-content;
   align-self: flex-end;
@@ -545,6 +557,16 @@ div.tasks .category button#btnAdd {
 
 div.tasks .category-name:hover .remove-task {
   visibility: visible;
+}
+
+.sendErrors{
+  display:block;
+  background-color:lightcoral;
+  padding:1em;
+  width:100%;
+  border-radius: 1em;
+  margin-bottom: 1em;
+
 }
 
 .category-name,
@@ -572,6 +594,7 @@ div.tasks .task input {
 }
 
 div.tasks .task input[type="checkbox"] {
+  width:auto;
   margin: .5em;
   margin-right: 1.5em;
   transform: scale(1.5);
@@ -579,6 +602,7 @@ div.tasks .task input[type="checkbox"] {
 }
 
 div.tasks .task input.editName {
+  width:auto;
   padding: .5em;
   transform: scale(1.1);
   border: 1px solid var(--dark-color);
@@ -601,11 +625,12 @@ div.tasks .taskDetails.expanded, div.tasks .taskDetails .col {
   width:fit-content;
   white-space: nowrap;
   justify-content: space-between;
+  
 }
 div.tasks .taskDetails.expanded {
   flex-wrap: wrap;
   margin: 0 0 0 5em;
-  
+  line-height: 300%;
 }
 
 

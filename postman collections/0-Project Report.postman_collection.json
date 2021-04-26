@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "c30ab8c6-9cae-4a8b-aa8c-4f5087c4b0aa",
+		"name": "0-Project Report",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Custom Week Starting Only",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgxODcxMSwiZXhwIjoxNjE5MTc4NzExfQ.OJjeu8tlgzR3Li9bErv6WpuEJvGmKuc2M3J4MsTsBGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2020-02-02\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Custom Week Starting & Ending",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgxODcxMSwiZXhwIjoxNjE5MTc4NzExfQ.OJjeu8tlgzR3Li9bErv6WpuEJvGmKuc2M3J4MsTsBGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2020-02-02\",\n    \"endDate\": \"2020-05-01\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current Week",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgxODcxMSwiZXhwIjoxNjE5MTc4NzExfQ.OJjeu8tlgzR3Li9bErv6WpuEJvGmKuc2M3J4MsTsBGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

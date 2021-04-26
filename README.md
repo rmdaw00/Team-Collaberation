@@ -8,28 +8,32 @@
 
 Features divided between groups members as:
 
-(Nour Rassam)
+(Noar Rassam)
 * Starting with login and registration ( authentication and authorization is Completed)
 * Contact us page with edit and add feature (Completed with proper validation, server and client side both)
 * team events calendar with different views (completed with proper validation, server and client side both)
+* Link: https://floating-sea-32917.herokuapp.com/
 
 (Sahibjeet Kaur)
-* member Profile  (Server side completed)
-* Team Building Page and invitations
-* Theme
+* member Profile  (Server side  and client side completed with validation)
+* Team Building Page and invitations (Server side  and client side completed with validation)
+* Theme (Server side  and client side completed with validation)
 
 (Karanjeet Kaur)
 * Team Notes ( server side completed)
-* Search bar
-* Project Setting Page
+* Search bar(Server side completed)
+* Project Setting Page(Server side completed)
 
 (Rashed)
-* team todo list with date due with comments
-* report 
-* theme & navigation 
+* team todo list with date due with comments (server side complete)
+* Chat / message notifications (server side complete)
+* Report (server side complete)
+
 
 (Manpreet Kaur)
-* Creating Projects and roles
-* Notifications page
-* announcement page
+* Creating Projects and roles(Server side completed)
+* Notifications page(Server side completed)
+* announcement page(Server side completed)
 
+(Optional)
+* theme & navigation 

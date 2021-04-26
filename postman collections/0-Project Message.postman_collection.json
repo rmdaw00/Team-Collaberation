@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "93b09e8e-6a34-4221-bd91-bab2a4f44dd4",
+		"name": "0-Project Message",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Unread Messages Threads",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxOTAwODQ0MCwiZXhwIjoxNjE5MzY4NDQwfQ.O9BUFvgDtcQi9NYNHETOoIs36KM45Cl7914bxa6bgmw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/messages/read",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages",
+						"read"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Read Messages Threads",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgzNjc4OCwiZXhwIjoxNjE5MTk2Nzg4fQ.aibJBqm_CK515UFDk8bLxcjMgQFJG46yOu17ua79gdM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/messages/unread",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages",
+						"unread"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get (Read) Message Thread By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxOTAwODQ0MCwiZXhwIjoxNjE5MzY4NDQwfQ.O9BUFvgDtcQi9NYNHETOoIs36KM45Cl7914bxa6bgmw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/messages/read",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages",
+						"read"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgzNjc4OCwiZXhwIjoxNjE5MTk2Nzg4fQ.aibJBqm_CK515UFDk8bLxcjMgQFJG46yOu17ua79gdM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"Hi Peter, how are you?\",\n    \"messageGroupID\": \"607d95a108a8a2a5c1105d3c\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delet Message",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxOTAwOTkwMywiZXhwIjoxNjE5MzY5OTAzfQ.f9zg_7bbTV9lbdZor6uBityHxKiskw1EO_MCtGbEsVM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messageGroupID\": \"607d95a108a8a2a5c1105d3c\",\n    \"messageID\": \"607d95a108a8a2a5c1105d3c\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/messages/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Message Thread",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODg0MTAzNywiZXhwIjoxNjE5MjAxMDM3fQ.rmn9Oh84W9TI60WN68Oq7HAH_BcWLiJohooyDITqTsw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"groupName\": \"\",\n    \"members\": [\"60601f426f8f331afc355155\",\"6060177c76e948f4ced07b87\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/messages/group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Message Thread Options",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxOTAwOTkwMywiZXhwIjoxNjE5MzY5OTAzfQ.f9zg_7bbTV9lbdZor6uBityHxKiskw1EO_MCtGbEsVM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"groupName\": \"Computer Cue\",\n    \"messageGroupID\": \"607d95a108a8a2a5c1105d3c\",\n    \"members\": [\"60601f426f8f331afc355155\",\"6060177c76e948f4ced07b87\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/messages/group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages",
+						"group"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

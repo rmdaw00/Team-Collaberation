@@ -44,9 +44,26 @@ export const SidebarData = [
     {
         title:'MyNotes',
         path:'/Notes',
-        icon:<AiIcons.AiFillBulb/>,
+        icon:<FaIcons.FaStickyNote/>,
         cName:'nav-textSide'
     },
+
+    {
+        title:'Report',
+        path:'/Report',
+        icon:<AiIcons.AiFillPieChart/>,
+        cName:'nav-textSide'
+    },
+
+
+
+    {
+        title:'Project Settings',
+        path:'/Setting',
+        icon:<AiIcons.AiFillSetting/>,
+        cName:'nav-textSide'
+    },
+
     <br></br>,<br></br>,
 
     {
@@ -62,4 +79,5 @@ export const SidebarData = [
         cName:'nav-textSide'
     },
   
+
 ]

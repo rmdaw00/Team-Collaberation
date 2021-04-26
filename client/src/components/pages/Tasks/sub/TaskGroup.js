@@ -1,45 +1,64 @@
 import React, {useState} from 'react';
 import AddTask from './AddTask'
 import Taskbox from './Taskbox';
-
+import axios from 'axios';
+var i = 0;
 const TaskGroup = (props) => {
     const [catName, setCatName] = useState(props.name);
     const [catEditState, setcatEditState] = useState(false);
     const [tasks, setTasks] = useState(props.tasks)
 
     const handleDelete = () => {
-      console.log(props.id)
+      
       props.deleteGroup(props.id)
     }
 
     const handleCategoryRename = (e) => {
         setCatName(e.target.value);
+
     }
 
     const addTask = (name) => {
-        props.addTask(props.key, name)
 
-        setTasks(tasks => [...tasks,{
-            id: tasks.length+1,
-            name: name,
-            dateDue:"",
-            assigned: "",
-            urgency:"none",
-            status:false
-        }]) 
-        
+      const token = localStorage.getItem('token')
+
+        let config = {
+            headers: {
+              'Content-Type': 'application/json',
+              'x-auth-token': token,
+            }
+          };
+        let data = {"todoGroupID": props.id,name}
+
+      axios.post('http://localhost:5000/api/todoTasks',data, config)
+        .then((response) => {
+          setTasks(tasks => [...tasks,response.data.tasks[response.data.tasks.length-1]]) 
+          
+      }).catch((error) => {
+          if (error.response) {
+            if (error.response.data.msg){
+              props.setSendError('Task Adding Error: ' + error.response.data.msg);
+              
+            } else if(error.response.data) 
+              if(error.response.data.errors)
+                if(error.response.data.errors[0])
+                  if(error.response.data.errors[0].msg)
+                    props.setSendError('Task Adding Error:' + error.response.data.errors[0].msg);
+       
+            } 
+           
+      });
     }   
 
 
     const toggleCatEdit = (e, force) => {
-        console.log(e)
-        
+                
         let catInput = e.target.parentElement.querySelector(".categoryEdit");
         let catLabel = e.target.parentElement.querySelector(".category-name");
-        let catButtonClose = e.target.parentElement.querySelector(".fa-close");
+        let catButtonClose = e.target.parentElement.querySelector(".fa-trash");
 
         let elements = [catInput,catLabel,catButtonClose]
-        console.log(catEditState)
+        
   
         setcatEditState(!catEditState | force)
         elements.forEach(element => {
@@ -48,24 +67,57 @@ const TaskGroup = (props) => {
           } else {
             element.classList.remove("expanded");
           }
+          
         })
+
+        if (catEditState) {
+          const token = localStorage.getItem('token')
+
+            let config = {
+                headers: {
+                  'Content-Type': 'application/json',
+                  'x-auth-token': token,
+                }
+              };
+            let data = {"todoGroupID": props.id, "name": catName}
+
+              axios.put('http://localhost:5000/api/todoGroups',data, config)
+                .then((response) => {
+                  setTasks(tasks => [...tasks,response.data.tasks[response.data.tasks.length-1]]) 
+                  
+              }).catch((error) => {
+                  if (error.response) {
+                    if (error.response.data.msg){
+                      props.setSendError('Task Adding Error: ' + error.response.data.msg);
+                    } else if(error.response.data) 
+                      if(error.response.data.errors)
+                        if(error.response.data.errors[0])
+                          if(error.response.data.errors[0].msg)
+                            props.setSendError('Task Adding Error:' + error.response.data.errors[0].msg);
+              
+                    } 
+                  
+              });
+        }
     }
 
 
 
-    let i = 0;
+  
+    
     return (
         <div className='category'>
               <div className="formHeader hoverable" onDoubleClick={toggleCatEdit}> 
                 <span className='category-name'>{catName}</span>
                 <input className='categoryEdit' type="text" value={catName} onChange={handleCategoryRename} />
-                <i id={props.id} class="fa fa-close appearable" onClick={handleDelete}></i> 
+                <i id={props.id} class="fa fa-trash appearable" onClick={handleDelete}></i> 
                 <i id={props.id} class="fas fa-pen appearable" onClick={toggleCatEdit}></i> 
               </div>
               {
-              tasks.map((t) => (
-                <Taskbox category={props.name} task={t} id={i++} key={i}/> 
-              ))}
+              tasks.map((t) => {
+                if (t)
+                  return  <Taskbox category={props.name} task={t} groupID= {props.id} id={i++} setSendError={props.setSendError} key={i}/> 
+              })}
               <AddTask addTask={addTask}/>
         </div>
     )

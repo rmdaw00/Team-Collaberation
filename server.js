@@ -27,6 +27,10 @@ app.post('/upload',(req,res)=>{
     res.json({fileName: file.name, filePath:`/uploads/${file.name}`});
   });
 })
+
+const app = express();
+
+
 // Connect Database
 connectDB();
 
@@ -37,9 +41,18 @@ app.use(cors());
 
 // Define Routes
 app.use('/api/users', require('./routes/users'));
+app.use('/api/todoGroups', require('./routes/todoGroupRoutes'));
+app.use('/api/todoTasks', require('./routes/todoTaskRoutes'));
+app.use('/api/report', require('./routes/reportRoute'))
+app.use('/api/messages', require('./routes/messageRoute'));
+
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/contacts', require('./routes/contacts'));
 app.use('/api/events', require('./routes/events'));
+
+app.use('/api/notes', require('./routes/noteRoute'));
+app.use('/api/setting', require('./routes/settingRoute'));
+
 app.use('/api/profile', require('./routes/profileRoutes'));
 app.use('/api/invite', require('./routes/invite'));
 

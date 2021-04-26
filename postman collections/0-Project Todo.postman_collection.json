@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "68a500ca-dd6d-45ea-baf5-e4b5025d68af",
+		"name": "0-Project Todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Group Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3IiwibmFtZSI6Im1hcmsifSwiaWF0IjoxNjE2OTEwNDQwLCJleHAiOjE2MTY5MTQwNDB9.b1haUzq5QpXbNxzxOJGZN0jzOkACJqhDRZilMnbNGZg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/todoGroups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todoGroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group List Mark",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgxODcxMSwiZXhwIjoxNjE5MTc4NzExfQ.OJjeu8tlgzR3Li9bErv6WpuEJvGmKuc2M3J4MsTsBGU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/todoGroups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todoGroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group List Peter",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3IiwibmFtZSI6Im1hcmsifSwiaWF0IjoxNjE2OTEwNDQwLCJleHAiOjE2MTY5MTQwNDB9.b1haUzq5QpXbNxzxOJGZN0jzOkACJqhDRZilMnbNGZg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/todoGroups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todoGroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group get By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "content",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3IiwibmFtZSI6Im1hcmsifSwiaWF0IjoxNjE3MjE4NjU5LCJleHAiOjE2MTcyMjIyNTl9.jGlLoveypgGQQAUMjA0Sc0a650QAtzF2K-KsVYZH5jc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"todoGroupID\": \"6064cca9b5e15856d8053f05\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/todoGroups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todoGroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Rename",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"todoGroupID\":\"\",\n    \"name\": \"renamed\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/todoGroups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todoGroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3IiwibmFtZSI6Im1hcmsifSwiaWF0IjoxNjE2OTEwNDQwLCJleHAiOjE2MTY5MTQwNDB9.b1haUzq5QpXbNxzxOJGZN0jzOkACJqhDRZilMnbNGZg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"todoGroupID\": \"606018fbd8a91bfdf7e11578\",\n    \"name\":\"lab 9\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/todoTasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todoTasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tasks get by groupID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/todoTasks/606018fbd8a91bfdf7e11578",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todoTasks",
+						"606018fbd8a91bfdf7e11578"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tasks edit Task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgxODcxMSwiZXhwIjoxNjE5MTc4NzExfQ.OJjeu8tlgzR3Li9bErv6WpuEJvGmKuc2M3J4MsTsBGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"todoGroupID\": \"606018fbd8a91bfdf7e11578\",\n    \"todoTaskID\" : \"607d4c11ca3e5e352a5ed82e\",\n    \"name\":\"Renamed new task\",\n    \"status\":false,\n    \"assignedUser\":\"6060177c76e948f4ced07b87\",\n    \"urgency\":\"Low\",\n    \"dueDate\":\"2020-02-02\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/todoTasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todoTasks"
+					]
+				},
+				"description": "Keep in mind that the ID of task changes everytime you edit"
+			},
+			"response": []
+		},
+		{
+			"name": "Task Delete",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"todoGroupID\": \"606018fbd8a91bfdf7e11578\",\n    \"todoTaskID\": \"6060569b88872c7c8b313926\"\n}"
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tasks get all with dates",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA2MDE3N2M3NmU5NDhmNGNlZDA3Yjg3In0sImlhdCI6MTYxODgxODcxMSwiZXhwIjoxNjE5MTc4NzExfQ.OJjeu8tlgzR3Li9bErv6WpuEJvGmKuc2M3J4MsTsBGU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/todoTasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"todoTasks"
+					]
+				},
+				"description": "only gets tasks from groups that are authorized, and only ones that have due dates"
+			},
+			"response": []
+		}
+	]
+}
