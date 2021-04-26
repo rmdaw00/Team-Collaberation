@@ -5,7 +5,7 @@ import AuthContext from '../../context/auth/authContext';
 import ContactContext from '../../context/contact/contactContext';
 
 
-const Navbar = ({ title, icon }) => {
+ const Navbar = ({ title, icon }) => {
   const authContext = useContext(AuthContext);
   const contactContext = useContext(ContactContext);
 
@@ -23,9 +23,10 @@ const Navbar = ({ title, icon }) => {
   };
 
   const authLinks = ( //registered
-   
+    
     <Fragment>
-
+     
+      {/* <Link to='/NavbarSide'>Profile</Link> */}
       <li>Hello {user && user.name}</li>
       <li>
         <a onClick={onLogout} href='#!'>
@@ -35,14 +36,15 @@ const Navbar = ({ title, icon }) => {
       </li>
       <li>
         <Link to='/calendar'>Calendar</Link>
-         <Link to='/Profile'>Profile</Link>
+        <Link to='/Profile'>Profile</Link>
         
-         <Link to='/Makeproject'>CreateProject</Link>
+        <Link to='/Makeproject'>CreateProject</Link>
          {/* <Link to='/NavbarSide'></Link>
          <Link to='/SidebarData'></Link> */}
                 
         {/* <Link to='/calendar'>Calendar</Link>  */}
       </li>
+      
     </Fragment>
   );
 

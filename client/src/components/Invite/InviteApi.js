@@ -28,7 +28,7 @@ const InviteApi = () => {
  
 
   const removeData = (id) => {
-    const URL = `http://localhost:5000/api/invite/${id}`
+    // const URL = `http://localhost:5000/api/invite/${id}`
 
     axios.delete(`http://localhost:5000/api/invite/${id}`).then ( () => {
       window.location.reload(false);

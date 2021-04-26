@@ -1,9 +1,14 @@
-import React,{useState} from 'react'
+import React,{useState,useContext, Fragment} from 'react';
 import {Link} from 'react-router-dom';
 import * as FcIcons from "react-icons/fc";
+import AuthContext from '../../context/auth/authContext';
  import './profile1.css';
  import axios from 'axios';
+ import FileUpload from './FileUpload';
+ 
 
+
+ 
 const Profile = () => {
     const [formData, setFormData] = useState({
         firstname:'',
@@ -15,6 +20,8 @@ const Profile = () => {
        
        
     });
+    const authContext = useContext(AuthContext);
+    const { isAuthenticated, logout, user, loadUser } = authContext;
     const [firstnameError,setfirstnameError] = useState('');
     const [lastnameError,setlastnameError] = useState('');
     const [emailError,setemailError] = useState('');
@@ -22,14 +29,17 @@ const Profile = () => {
     const [teamError,setteamError] = useState('');
     const [aboutmeError,setaboutmeError] = useState('');
     const{firstname,lastname,email,role,team,aboutme} = formData;
+    const [image,setimage]=useState('')
+    const [loading,setloading] =useState(false)
 const onChange2 =(e) =>setFormData({...formData,[e.target.name]: e.target.value});
+
 
 const onSubmit2 = async (e) => {
   e.preventDefault();
 
   let formValid = true;
 
-  let firstnamePattern = /^[A-Z][a-zA-Z]*$/;
+  let firstnamePattern = /^(.|\s)*[a-zA-Z]+(.|\s)*$/;
   let emailPattern = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
   //validation on firstname
 
@@ -144,8 +154,12 @@ else {
   }
 }
 };
+<h4>
+<i className="fab fa-react" /> React file Upload
+</h4>
 
     return (
+    
         <div className='profile-container'>
             <h1>
                 <span className="text-primary">My Profile Settings</span>
@@ -156,22 +170,23 @@ else {
                 <li><Link to='/Notification'>Notifications</Link></li>
                 <li><Link to='/'>Email Forwarding</Link></li>
                 <li><Link to='/'>Account</Link></li>
-                <li><Link to='/'>Display</Link></li>
+               
 
             </ul>
             </div>
-          
+            <FileUpload />
           <p style={{color:'#003699'}}>Your Photo</p>
           <Link to='/'><FcIcons.FcPicture/></Link> 
-        <p><Link to='/'>Upload your picture</Link> </p>
+        
+     
        <form onSubmit={(e)=> onSubmit2(e)}>
           
                <p>
        <label  style={{color:'#003699'}} htmlFor="fname">First Name:</label>
                     <input id='fname' type='text'
                      name='firstname' 
-                     placeholder ='first Name'
-                     value={firstname}
+                     placeholder ={user && user.name}
+                     value={user && user.name}
                      onChange={(e)=> onChange2(e)}/> 
                      {firstnameError && <p style={{color: 'red'}}>{firstnameError}</p>}
                        
