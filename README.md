@@ -31,9 +31,8 @@ Features divided between groups members as:
 
 
 (Manpreet Kaur)
-* Creating Projects and roles(Server side completed)
-* Notifications page(Server side completed)
-* announcement page(Server side completed)
+* Creating Projects(Server side and client side completed)
+* announcement page(Server side and client side completed)
 
 (Optional)
 * theme & navigation 
