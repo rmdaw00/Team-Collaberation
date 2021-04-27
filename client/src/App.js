@@ -29,7 +29,7 @@ import Settings from './components/ProjectSettings/Setting';
 import Invite from './components/Invite/InviteTeams';
 import InviteApi from './components/Invite/InviteApi';
 
-
+import Announcementdisplay from './components/Announcements/Announcementdisplay';
 
 import ContactState from './context/contact/ContactState';
 import EventState from './context/newEvent/EventState';
@@ -103,6 +103,7 @@ function App()  {
             <Route exact path='/Tasks/Group' component={TasksGroup} />
             <Route exact path='/Report' component={Report} />
             <PrivateRoute exact path='/Makeproject' component={MakeProject} />
+            <Route exact path='/announcements' component={Announcementdisplay} />
             
 
             <Route exact path='/AssignTask' component={AssignTask} />

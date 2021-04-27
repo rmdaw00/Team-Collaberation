@@ -1,28 +1,53 @@
 import React from 'react';
 import CreateProject from './CreateProject'
-import Project from './Project'
+import {Container, AppBar, Typography, Grow, Grid} from '@material-ui/core';
+import Project from './Project';
 import {Link} from 'react-router-dom';
-const MakeProject = () => {
+import useStyles from '../styles'
 
+
+const MakeProject = () => {
+const classes = useStyles();
 
   return (
-  <div> 
+    
+  <div className = "MakeProject">
+     <div className='profilelinks'>
+     
+     <Container maxWidth ="lg">
+       <AppBar className = {classes.appBar} position="static" color= "inherit" >
+         <Typography className = {classes.heading} variant="h1" align = "center"> Create new project
+
+         </Typography>
+       </AppBar>
+
+       <Grow in>
+         <Container>
+           <Grid container justify="space-between" alignItems="stretch">
+              <Grid item xs={12} sm={7}>
+                 <AppBar className={classes.appBar} position="static" color= "inherit">
+                   <Project/>
+                 </AppBar>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+              <AppBar className={classes.appBar} position="static" color= "inherit">
+              <CreateProject/>
+              </AppBar>
+              </Grid>
+
+           </Grid>
+         </Container>
+       </Grow>
   
-          <h1>
-              <span className="text-primary">Create new project</span>
-          </h1>
-          <div className='profilelinks'>
-            <ul  >
-                <li><Link to='/MakeProject'>CreateProject</Link></li>
-                <li><Link to='/AssignTask'>AssignTask</Link></li>
-            </ul>
-         <CreateProject/>
-         <Project/>
+          
+         
+            
+        
+           
+
+  
+            </Container> 
             </div>
-
-  
- 
-
   
   </div>
 

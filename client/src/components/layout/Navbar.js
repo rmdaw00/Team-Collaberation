@@ -43,6 +43,7 @@ import EventContext from '../../context/newEvent/eventContext';
         <Link to='/Profile'>Profile</Link>
         
         <Link to='/Makeproject'>CreateProject</Link>
+        <Link to='/announcements'>Announcements</Link>
          {/* <Link to='/NavbarSide'></Link>
          <Link to='/SidebarData'></Link> */}
                 
