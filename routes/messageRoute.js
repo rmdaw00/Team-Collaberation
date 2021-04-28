@@ -185,7 +185,7 @@ router.post('/', auth, [
           const iv = crypto.randomBytes(16).toString("hex").slice(0, 16);
           const key = config.get('messagesKey')
           const encrypter = crypto.createCipheriv("aes-256-cbc", key, iv);
-          let encryptedMsg = encrypter.update(req.body.content, "utf8", "hex");
+          let encryptedMsg = encrypter.update('0000000000000000'+req.body.content, "utf8", "hex");
           encryptedMsg += encrypter.final("hex");
 
         const newMessage = {
