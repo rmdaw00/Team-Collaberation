@@ -8,6 +8,7 @@ let Notes = require('../models/Notes');
 
 
 const { check,validationResult} = require('express-validator');
+const { Note } = require('@material-ui/icons');
 
 const router =express.Router();
 
@@ -93,7 +94,7 @@ router.delete('/:id', auth, async (req, res) => {
     
     const id = req.params.id;
       try{
-        await Project.findByIdAndRemove(id).exec();
+        await Notes.findByIdAndRemove(id).exec();
         res.send('Successfully deleted')
       }
 

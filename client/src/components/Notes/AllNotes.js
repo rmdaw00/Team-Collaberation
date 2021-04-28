@@ -33,8 +33,8 @@ const AllNotes = () => {
     <div>
       {posts.map((note, key) => (
         // <Post post={post} key={post.id} />
-      
-         <tr key={note.id}>
+       
+         <tr key={key} >
         <td>{note.title}</td>
         <td>{note.description}</td>
         <td>
@@ -44,7 +44,7 @@ const AllNotes = () => {
             </button>
             </td>
             <td> 
-            <button  onClick={() => deleteNote(note.id)}  className='btn btn-danger btn-sm' >
+            <button  onClick={() => deleteNote(note._id)}  className='btn btn-danger btn-sm' >
             Delete
           </button> 
           </td> 
