@@ -167,9 +167,9 @@ else {
           <div className='profilelinks'>
             <ul  >
                 <li><Link to='/Profile'>Profile</Link></li>
-                <li><Link to='/Notification'>Notifications</Link></li>
-                <li><Link to='/'>Email Forwarding</Link></li>
-                <li><Link to='/'>Account</Link></li>
+                <li><Link to='/ShowProfile'>Show Profile</Link></li>
+                {/* <li><Link to='/'>Email Forwarding</Link></li>
+                <li><Link to='/'>Account</Link></li> */}
                
 
             </ul>

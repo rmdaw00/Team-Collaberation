@@ -13,6 +13,8 @@ import PrivateRoute from './components/routing/PrivateRoute';
 import ReactCalendar from './components/datePicker/Calendar';
 import Profile from './components/Profile/Profile';
 import Notification from'./components/ProfileLinks/Notification';
+import  ShowProfile from'./components/Profile/ShowProfile';
+
 import Notes from'./components/Notes/NewNote';
 
 import MakeProject from './components/MakeProject/MakeProject';
@@ -91,25 +93,28 @@ function App()  {
                   <Route exact path='/login' component={Login} />
                   <PrivateRoute exact path='/calendar' component={ReactCalendar} />
                   <PrivateRoute exact path='/Profile' component={Profile} />
+                  <PrivateRoute exact path="/ShowProfile" component={ShowProfile} />
 
 
-            <Route exact path='/Notification' component={Notification} />
-            <Route exact path='/Notes' component={Notes} />
-            <Route exact path='/Setting' component={Settings} />
-            <Route exact path='/Tasks' component={TasksGroup} />
-            <Route exact path='/Tasks/Date' component={TasksDate} />
-            <Route exact path='/Tasks/Group' component={TasksGroup} />
-            <Route exact path='/Report' component={Report} />
-            <Route exact path='/Messages' component={Messages} />
+
+
+            <PrivateRoute exact path='/Messages' component={Messages} />
+            <PrivateRoute exact path='/Notification' component={Notification} />
+            <PrivateRoute exact path='/Notes' component={Notes} />
+            <PrivateRoute exact path='/Setting' component={Settings} />
+            <PrivateRoute exact path='/Tasks' component={TasksGroup} />
+            <PrivateRoute exact path='/Tasks/Date' component={TasksDate} />
+            <PrivateRoute exact path='/Tasks/Group' component={TasksGroup} />
+            <PrivateRoute exact path='/Report' component={Report} />
             <PrivateRoute exact path='/Makeproject' component={MakeProject} />
-            <Route exact path='/announcements' component={Announcementdisplay} />
+            <PrivateRoute exact path='/announcements' component={Announcementdisplay} />
             
 
             
-              <Route exact path='/AllNotes' component={AllNotes} />
+              <PrivateRoute exact path='/AllNotes' component={AllNotes} />
 
-            <Route exact path='/Invite' component={Invite} />
-            <Route exact path='/InviteApi' component={InviteApi} />
+            <PrivateRoute exact path='/Invite' component={Invite} />
+            <PrivateRoute exact path='/InviteApi' component={InviteApi} />
             
 
                   {/* <ScheduleComponent currentView="Month" >

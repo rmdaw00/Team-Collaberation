@@ -24,6 +24,13 @@ const AllNotes = () => {
             window.location.reload(false);
     })
 }
+const EditNote = (id) => {
+  axios.put(`http://localhost:5000/api/notes/${id}`).then ( () => {
+
+  
+         
+  })
+}
 
 
 
@@ -38,10 +45,10 @@ const AllNotes = () => {
         <td>{note.title}</td>
         <td>{note.description}</td>
         <td>
-        <button  className='btn btn-dark btn-sm'>
+        <button  onClick={() => EditNote(note._id)} className='btn btn-dark btn-sm'>
        
             Edit
-            </button>
+            </button >
             </td>
             <td> 
             <button  onClick={() => deleteNote(note._id)}  className='btn btn-danger btn-sm' >

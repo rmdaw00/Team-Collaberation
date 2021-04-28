@@ -68,7 +68,7 @@ router.get('/', auth,  async(req, res) => {
           return res.status(404).json({ msg: 'Project not found' });
         }
         
-        project.name = req.body.name;
+        project. name = req.body. name;
         project.description= req.body.description;
         
        
