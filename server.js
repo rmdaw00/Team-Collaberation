@@ -28,7 +28,6 @@ app.post('/upload',(req,res)=>{
   });
 })
 
-// const app = express();
 
 
 // Connect Database
@@ -55,6 +54,9 @@ app.use('/api/setting', require('./routes/settingRoute'));
 
 app.use('/api/profile', require('./routes/profileRoutes'));
 app.use('/api/invite', require('./routes/invite'));
+app.use('/api/projects',require('./routes/projectRoute'));
+app.use('/api/announcements',require('./routes/announcementRoute'));
+
 
 
 // app.use('/allcontacts', require('./routes/contacts'));

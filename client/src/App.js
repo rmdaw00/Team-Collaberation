@@ -16,9 +16,6 @@ import Notification from'./components/ProfileLinks/Notification';
 import Notes from'./components/Notes/NewNote';
 
 import MakeProject from './components/MakeProject/MakeProject';
-import AssignTask from './components/MakeProject/AssignTask';
-import Cal from './components/MakeProject/Cal';
-import Schedule from './components/MakeProject/Schedule';
 import TasksGroup from './components/pages/Tasks/TasksGroup';
 import TasksDate from './components/pages/Tasks/TasksDate';
 import Report from './components/pages/Report/Report';
@@ -29,7 +26,7 @@ import Settings from './components/ProjectSettings/Setting';
 import Invite from './components/Invite/InviteTeams';
 import InviteApi from './components/Invite/InviteApi';
 
-
+import Announcementdisplay from './components/Announcements/Announcementdisplay';
 
 import ContactState from './context/contact/ContactState';
 import EventState from './context/newEvent/EventState';
@@ -103,14 +100,11 @@ function App()  {
             <Route exact path='/Tasks/Group' component={TasksGroup} />
             <Route exact path='/Report' component={Report} />
             <PrivateRoute exact path='/Makeproject' component={MakeProject} />
+            <Route exact path='/announcements' component={Announcementdisplay} />
             
 
-            <Route exact path='/AssignTask' component={AssignTask} />
-            <Route exact path='/Cal' component={Cal} />
-            <Route exact path='/Schedule' component={Schedule} />
-            <Route exact path='/Schedule' component={Schedule} />
-
-            <Route exact path='/AllNotes' component={AllNotes} />
+            
+              <Route exact path='/AllNotes' component={AllNotes} />
 
             <Route exact path='/Invite' component={Invite} />
             <Route exact path='/InviteApi' component={InviteApi} />
