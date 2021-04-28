@@ -6,7 +6,7 @@ const AllNotes = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/notes').then((response) => {
+    axios.get(`http://localhost:5000/api/notes`).then((response) => {
       setPosts(response.data);
       console.log(response);
     });
@@ -44,7 +44,7 @@ const AllNotes = () => {
             </button>
             </td>
             <td> 
-            <button  onClick={() => deleteNote(note._id)}  className='btn btn-danger btn-sm' >
+            <button  onClick={() => deleteNote(note.id)}  className='btn btn-danger btn-sm' >
             Delete
           </button> 
           </td> 
