@@ -17,18 +17,7 @@ export const SidebarData = [
         icon:<AiIcons.AiOutlineCheckCircle/>,
         cName:'nav-textSide'
     },
-    {
-        title:'Inbox',
-        path:'/inbox',
-        icon:<AiIcons.AiOutlineBell/>,
-        cName:'nav-textSide'
-    },
-    {
-        title:'Portfolios',
-        path:'/portfolios',
-        icon:<FiIcons.FiBarChart2/>,
-        cName:'nav-textSide'
-    },
+   
     {
         title:'Messages',
         path:'/messages',
@@ -64,7 +53,7 @@ export const SidebarData = [
         cName:'nav-textSide'
     },
 
-    <br></br>,<br></br>,
+   
 
     {
         title:'Invite Teammates',
@@ -72,12 +61,7 @@ export const SidebarData = [
         icon:<FcIcons.FcInvite/>,
         cName:'nav-textSide'
     },
-    {
-        title:'Theme',
-        path:'/Theme',
-        icon:<FcIcons.FcInvite/>,
-        cName:'nav-textSide'
-    },
+ 
   
 
 ]

@@ -69,21 +69,36 @@ async (req,res)=>{
         res.status(500).send('Server error');
     }
 });
-router.delete('/',auth, async(req,res)=>{
-    try{
-        const profile = await Profile.findById(req.body.id);
-        if(!profile){
-            return res.status(404).json({msg: 'Task not found'});
-        }
-            const result = await Profile.findByIdAndDelete(req.body.id);
+// router.delete('/',auth, async(req,res)=>{
+//     try{
+//         const profile = await Profile.findById(req.body.id);
+//         if(!profile){
+//             return res.status(404).json({msg: 'Task not found'});
+//         }
+//             const result = await Profile.findByIdAndDelete(req.body.id);
        
-        res.send(result);
+//         res.send(result);
      
-    }
-    catch(err){
-        res.status(500).send('Server error');
-    }
-})
+//     }
+//     catch(err){
+//         res.status(500).send('Server error');
+//     }
+// })
+
+router.delete('/:id', auth, async (req, res) => {
+    
+    const id = req.params.id;
+      try{
+        await Profile.findByIdAndRemove(id).exec();
+        res.send('Successfully deleted')
+      }
+
+      catch(error){
+        console.log(error);
+      }
+      
+  });
+
 router.put('/',auth,
 [
     check('firstname','first name is required').not().isEmpty(),

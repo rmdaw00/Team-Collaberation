@@ -1,28 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 import axios from 'axios';
-import IconButton from '@material-ui/core/IconButton';
-import DeleteIcon from '@material-ui/icons/Delete';
-
-
-
-const useStyles = makeStyles({
-  table: {
-    minWidth: 650,
-  },
-});
-
-
- function Project() {
+import './MakeProject.css';
+//import IconButton from '@material-ui/core/IconButton';
+// import DeleteIcon from '@material-ui/icons/Delete';
+import * as AiIcons from "react-icons/ai";
+function ShowProjects() {
   
-  const classes = useStyles();
+ 
   
  
   const [projectsList, setProjectsList] = useState([])
@@ -41,42 +25,43 @@ const useStyles = makeStyles({
   
 }, [])
   return (
-          <>
+    <div id="project" className="col-md-8">
           <h2>All Projects</h2>
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell component="th"> Title </TableCell>
-            <TableCell component="th"> Description</TableCell>
-            <TableCell component="th"> Action</TableCell>
+    <table  className="table table-bordered">
+      <thead>
+        <tr>
+          
+            <th> Title </th>
+            <th> Description </th> 
+            <th> Action</th>
             
-          </TableRow>
-        </TableHead>
-        <TableBody>
+          </tr>
+        </thead>
+        <tbody>
           {projectsList.map((project, key) => (
-            <TableRow key={key}>
-              <TableCell scope="row">
+            <tr key={key}>
+              <td>
                 {project.name}
-              </TableCell>
-              <TableCell  scope="row">{project.description}</TableCell>
-              <TableCell  scope="row">
-              <IconButton aria-label="delete" className={classes.margin} onClick={() => deleteProject(project._id)} >
-                   <DeleteIcon  fontSize="small" />
-              </IconButton>
+              </td>
+              <td> {project.description}</td>
+              <td>
+              <button aria-label="delete"  onClick={() => deleteProject(project._id)} >
+                 
+                   <AiIcons.AiFillDelete/>
+              </button>
              
 
     
               
-              </TableCell>
+              </td>
               
-            </TableRow>
+            </tr>
           ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    </>
+        </tbody>
+      </table>
+    
+    </div>
   );
 }
 
-export default Project;
+export default ShowProjects;

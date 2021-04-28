@@ -1,50 +1,33 @@
 import React,{useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '25ch',
-    },
-  },
-}));
 
-function CreateProject() {
-  const classes = useStyles();
-  const [project, setProject] = useState ({
-    name: ' ',
-    description :  ' '
-  });
+function Create() {
+  
+  
+
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
 
   const createProject = () => {
-      axios.post('http://localhost:5000/api/projects',project).then (() =>
-    {
-          window.location.reload(false);
-    })
-  }
+      axios.post('http://localhost:5000/api/projects',{name:title, description:description })
+  };
 
   return (
-    <>
+
+    <div className="row text-center" >
+    <div className="col-md-4">
     <h2> Create Project</h2>
-    <form className={classes.root} noValidate autoComplete="off">
+    <form >
       
-      <TextField id="outlined-basic" align="center" label="Project Title" variant="outlined" value={project.name} onChange= {(event)=> {
-        setProject({ ...project, name: event.target.value})
-      }}/>
-      <TextField id="outlined-basic" align="center" label="Description" variant="outlined" value={project.description} onChange={(event)=>{
-        setProject({ ...project, description: event.target.value})
-      }}/>
-      <Button variant="contained" color="primary" onClick={createProject}>
-        Create
-      </Button>
+    <input required onChange = {(event)=> {setTitle(event.target.value)}} name='name' style={{marginTop:'50px'}}placeholder="Title" className="form-control"/>
+                        <input required onChange = {(event)=> {setDescription(event.target.value)}} name='description' style={{marginTop:'30px'}}placeholder="Description" className="form-control"/>
+                        <button style={{marginTop:'10px', width:'500px'}} onClick= {createProject} className="btn btn-primary">Create</button>
+       
     </form>
-    </>
+    </div>
+    </div>
   );
-};
+}
 
-export default CreateProject;
-
+export default Create;
